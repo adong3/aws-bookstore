@@ -3,7 +3,7 @@ $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
 $con = mysqli_select_db($connection, DB_DATABASE);
 
 $products = "SELECT * FROM products";
-$grab = $con->query($products);
+$grab = mysqli_query($connection, $products);
 
 
 
@@ -36,13 +36,12 @@ $grab = $con->query($products);
     Yes it works fine now.
 
 
-    <?php while ($row = mysqli_fetch_assoc($grab)) : ?>
+    <?php
+    while ($row = mysqli_fetch_row($grab)) {
+        echo $row[0];
+    }
 
-        $<?php echo $row['price']; ?>
-
-
-
-    <? endwhile; ?>
+    ?>
 
 
 
