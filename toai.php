@@ -41,7 +41,7 @@ $grab = mysqli_query($connection, $products);
 
         echo $row['price'];
         echo "<br />";
-        echo $row['price'];
+        echo $row['image'];
         echo "<br />";
     }
 
