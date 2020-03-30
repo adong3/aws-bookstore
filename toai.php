@@ -38,9 +38,7 @@ $grab = $con->query($products);
 
     <?php while ($row = mysqli_fetch_assoc($grab)) : ?>
 
-        <div>Price: $<?php echo $row['price']; ?></div>
-        <img src="img/<?php echo $row['image']; ?>" height="160px" width="120px%">
-        <div>Title: <?php echo $row['title']; ?></div>
+        $<?php echo $row['price']; ?>
 
 
 
