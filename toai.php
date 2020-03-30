@@ -37,8 +37,8 @@ $grab = mysqli_query($connection, $products);
 
 
     <?php
-    while ($row = mysqli_fetch_row($grab)) {
-        echo $row[0];
+    while ($row = mysqli_fetch_assoc($grab)) {
+        echo $row['price'];
     }
 
     ?>
