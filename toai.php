@@ -39,11 +39,10 @@ $grab = mysqli_query($connection, $products);
     <?php
     while ($row = mysqli_fetch_assoc($grab)) {
         echo "<div class=\"col-md-4 game\">";
-        echo "<div>Price: " . $row['price'] . "< /div>";
-
+        echo "<div>Price: " . $row['price'] . "</div>";
         echo "<img src=\"img/" . $row['image'] . "\" height=\"160px\" width=\"120px%\">";
-        echo "<div>Title:" . $row['title'] . "</div>";
-        echo "< /div>";
+        echo "<div>Title: " . $row['title'] . "</div>";
+        echo "</div>";
     }
 
     ?>
