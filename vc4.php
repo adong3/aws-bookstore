@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect('fdb17.biz.nf', '2412678_yudongweb', 'sxbsyd123', '2412678_yudongweb');
+$con = mysqli_connect('remotemysql.com', 'HDUhlHSVId', 'pCyPrxpWve', 'HDUhlHSVId');
 
 $products = "SELECT * FROM products WHERE category_id = 4";
 $grab = $con->query($products);

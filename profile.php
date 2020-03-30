@@ -2,7 +2,7 @@
 session_start();
 $username = $_SESSION['username'];
 
-$con = mysqli_connect('fdb17.biz.nf', '2412678_yudongweb', 'sxbsyd123', '2412678_yudongweb');
+$con = mysqli_connect('remotemysql.com', 'HDUhlHSVId', 'pCyPrxpWve', 'HDUhlHSVId');
 $sql1 = "SELECT * FROM users WHERE username = '$username'";
 $sql2 = "SELECT * FROM orders WHERE username = '$username'";
 $result1 = $con->query($sql1);
