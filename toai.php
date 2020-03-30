@@ -37,12 +37,17 @@ $grab = mysqli_query($connection, $products);
 
 
     <?php
-    while ($row = mysqli_fetch_assoc($grab)) : ?>
-        <?php echo $row['price']; ?>
+    while ($row = mysqli_fetch_assoc($grab)) {
+        echo "<div class=\"col-md-4 game\">";
+        echo "<img src=\"img/";
+        echo $row['price'];
+        echo "<br />";
+        echo "<img src=\"img/" . $row['image'] . "\" height=\"160px\" width=\"120px%\">";
+        echo "<br />";
+        echo "< /div>";
+    }
 
-
-
-    <? endwhile; ?>
+    ?>
 
 
 
