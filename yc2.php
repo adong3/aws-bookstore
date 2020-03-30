@@ -2,8 +2,9 @@
 session_start();
 
 $con = mysqli_connect('remotemysql.com', 'HDUhlHSVId', 'pCyPrxpWve', 'HDUhlHSVId');
-$sql = "SELECT * FROM products WHERE category_id = 2";
-$result = $con->query($sql);
+
+$products = "SELECT * FROM products";
+$grab = $con->query($products);
 
 ?>
 
