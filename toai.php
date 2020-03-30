@@ -1,5 +1,6 @@
-<?php
-$con = mysqli_connect('remotemysql.com', 'HDUhlHSVId', 'pCyPrxpWve', 'HDUhlHSVId');
+<?php include "dbinfo.php";
+$connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
+$con = mysqli_select_db($connection, DB_DATABASE);
 
 $products = "SELECT * FROM products";
 $grab = $con->query($products);
