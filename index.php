@@ -123,12 +123,12 @@ if (isset($_POST['login'])) {
                             <div class="row">
                                 <?php
                                 while ($row = mysqli_fetch_assoc($grab)) {
-                                    echo "<div class=\"col-md-4 game\">";
-                                    echo "<div>Price: " . $row['price'] . "< /div>";
+                                    echo "<div class=\"col-md-4\sgame\">";
+                                    echo "<div>Price: " . $row['price'] . "</div>";
 
                                     echo "<img src=\"img/" . $row['image'] . "\" height=\"160px\" width=\"120px%\">";
                                     echo "<div>Title:" . $row['title'] . "</div>";
-                                    echo "< /div>";
+                                    echo "</div>";
                                 }
 
                                 ?>
@@ -151,8 +151,12 @@ if (isset($_POST['login'])) {
 ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
+    <script>
+        window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+    </script>
     <script src="js/bootstrap.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
 </body>
 
