@@ -121,15 +121,17 @@ if (isset($_POST['login'])) {
                         </div>
                         <div class="panel-body">
                             <div class="row">
-                                <?php while ($row = mysqli_fetch_assoc($grab)) : ?>
-                                    <div class="col-md-4 game">
-                                        <div>Price: $<?php echo $row['price']; ?></div>
-                                        <img src="img/<?php echo $row['image']; ?>" height="160px" width="120px%">
-                                        <div>Title: <?php echo $row['title']; ?></div>
+                                <?php
+                                while ($row = mysqli_fetch_assoc($grab)) {
+                                    echo "<div class=\"col-md-4 game\">";
+                                    echo "<div>Price: " . $row['price'] . "< /div>";
 
-                                    </div>
+                                    echo "<img src=\"img/" . $row['image'] . "\" height=\"160px\" width=\"120px%\">";
+                                    echo "<div>Title:" . $row['title'] . "</div>";
+                                    echo "< /div>";
+                                }
 
-                                <? endwhile; ?>
+                                ?>
 
 
                             </div>
