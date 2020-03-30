@@ -38,7 +38,11 @@ $grab = mysqli_query($connection, $products);
 
     <?php
     while ($row = mysqli_fetch_assoc($grab)) {
+
         echo $row['price'];
+        echo "<br />";
+        echo $row['price'];
+        echo "<br />";
     }
 
     ?>
